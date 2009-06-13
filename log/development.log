@@ -1,0 +1,127 @@
+  [4;36;1mSQL (17.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (12.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (5.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20090613205354)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("topics")[0m
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 16:54:23) [GET]
+  [4;36;1mTopic Load (0.7ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 32ms (View: 22, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#new (for 192.168.37.1 at 2009-06-13 16:55:58) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 26ms (View: 13, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/new]
+
+
+Processing TopicsController#create (for 192.168.37.1 at 2009-06-13 16:56:27) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"How to suggest a topic", "description"=>"We will learn how to suggest a topic..."}}
+  [4;35;1mTopic Create (8.3ms)[0m   [0mINSERT INTO "topics" ("created_at", "title", "updated_at", "description") VALUES('2009-06-13 20:56:27', 'How to suggest a topic', '2009-06-13 20:56:27', 'We will learn how to suggest a topic...')[0m
+Redirected to http://nbb.ilen.vm:3000/topics/1
+Completed in 95ms (DB: 8) | 302 Found [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 16:56:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (7.6ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 32ms (View: 14, DB: 8) | 200 OK [http://nbb.ilen.vm/topics/1]
+
+
+Processing TopicsController#edit (for 192.168.37.1 at 2009-06-13 16:56:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 22ms (View: 11, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/1/edit]
+
+
+Processing TopicsController#update (for 192.168.37.1 at 2009-06-13 16:56:44) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"How to suggest a topic", "description"=>"We will learn how to suggest a topic... and submit it!"}, "id"=>"1"}
+  [4;36;1mTopic Load (0.4ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+  [4;35;1mTopic Update (0.3ms)[0m   [0mUPDATE "topics" SET "updated_at" = '2009-06-13 20:56:44', "description" = 'We will learn how to suggest a topic... and submit it!' WHERE "id" = 1[0m
+Redirected to http://nbb.ilen.vm:3000/topics/1
+Completed in 58ms (DB: 1) | 302 Found [http://nbb.ilen.vm/topics/1]
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 16:56:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTopic Load (0.7ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://nbb.ilen.vm/topics/1]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 16:56:58) [GET]
+  [4;35;1mTopic Load (1.1ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#new (for 192.168.37.1 at 2009-06-13 16:57:01) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/new]
+
+
+Processing TopicsController#create (for 192.168.37.1 at 2009-06-13 16:57:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"Here's another topic", "description"=>"Test test"}}
+  [4;36;1mTopic Create (0.3ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "updated_at", "description") VALUES('2009-06-13 20:57:15', 'Here''s another topic', '2009-06-13 20:57:15', 'Test test')[0m
+Redirected to http://nbb.ilen.vm:3000/topics/2
+Completed in 63ms (DB: 0) | 302 Found [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 16:57:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTopic Load (0.6ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 24ms (View: 6, DB: 1) | 200 OK [http://nbb.ilen.vm/topics/2]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 16:57:24) [GET]
+  [4;36;1mTopic Load (0.7ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#destroy (for 192.168.37.1 at 2009-06-13 16:57:33) [DELETE]
+  Parameters: {"authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "id"=>"2"}
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+  [4;36;1mTopic Destroy (0.2ms)[0m   [0;1mDELETE FROM "topics" WHERE "id" = 2[0m
+Redirected to http://nbb.ilen.vm:3000/topics
+Completed in 61ms (DB: 1) | 302 Found [http://nbb.ilen.vm/topics/2]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 16:57:34) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]

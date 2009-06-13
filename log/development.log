@@ -125,3 +125,484 @@ Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 16:57:34) [GET
 Rendering template within layouts/topics
 Rendering topics/index
 Completed in 20ms (View: 6, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 17:06:36) [GET]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#index to xml (for 192.168.37.1 at 2009-06-13 17:07:29) [GET]
+  [4;35;1mTopic Load (0.7ms)[0m   [0mSELECT * FROM "topics" [0m
+Completed in 240ms (View: 231, DB: 1) | 200 OK [http://nbb.ilen.vm/topics.xml]
+  [4;36;1mTopic Load (0.8ms)[0m   [0;1mSELECT * FROM "topics" [0m
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" [0m
+
+
+Processing TopicsController#new (for 192.168.37.1 at 2009-06-13 17:37:22) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 59ms (View: 9, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/new]
+
+
+Processing TopicsController#create (for 192.168.37.1 at 2009-06-13 17:37:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"Foo", "description"=>"Bar"}}
+  [4;36;1mTopic Create (0.5ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "updated_at", "description") VALUES('2009-06-13 21:37:34', 'Foo', '2009-06-13 21:37:34', 'Bar')[0m
+Redirected to http://nbb.ilen.vm:3000/topics/3
+Completed in 61ms (DB: 0) | 302 Found [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 17:37:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTopic Load (0.5ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/3]
+  [4;36;1mTopic Load (0.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+  [4;35;1mTopic Create (0.8ms)[0m   [0mINSERT INTO "topics" ("created_at", "title", "updated_at", "description") VALUES('2009-06-13 21:40:00', NULL, '2009-06-13 21:40:00', NULL)[0m
+  [4;36;1mTopic Load (0.9ms)[0m   [0;1mSELECT * FROM "topics" [0m
+  [4;35;1mTopic Load (0.9ms)[0m   [0mSELECT * FROM "topics" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (59.9ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (37.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (13.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (74.7ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (32.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (5.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (20.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (54.7ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (36.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+
+
+Processing TopicsController#edit (for 192.168.37.1 at 2009-06-13 17:56:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTopic Load (9.3ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 30ms (View: 11, DB: 9) | 200 OK [http://nbb.ilen.vm/topics/3/edit]
+
+
+Processing TopicsController#update (for 192.168.37.1 at 2009-06-13 17:56:59) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"", "description"=>"Bar"}, "id"=>"3"}
+  [4;35;1mTopic Load (0.4ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 23ms (View: 5, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/3]
+
+
+Processing TopicsController#update (for 192.168.37.1 at 2009-06-13 17:57:18) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"here's a title", "description"=>"Bar"}, "id"=>"3"}
+  [4;36;1mTopic Load (1.4ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+  [4;35;1mTopic Update (0.3ms)[0m   [0mUPDATE "topics" SET "updated_at" = '2009-06-13 21:57:18', "title" = 'here''s a title' WHERE "id" = 3[0m
+Redirected to http://nbb.ilen.vm:3000/topics/3
+Completed in 68ms (DB: 2) | 302 Found [http://nbb.ilen.vm/topics/3]
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 17:57:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTopic Load (0.3ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/3]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 17:57:41) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 22ms (View: 10, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#edit (for 192.168.37.1 at 2009-06-13 17:57:50) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.7ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 28ms (View: 11, DB: 1) | 200 OK [http://nbb.ilen.vm/topics/4/edit]
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 17:57:55) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mTopic Load (0.7ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 144ms (View: 123, DB: 1) | 200 OK [http://nbb.ilen.vm/topics/4]
+
+
+Processing TopicsController#edit (for 192.168.37.1 at 2009-06-13 17:57:58) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.5ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 22ms (View: 7, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/4/edit]
+
+
+Processing TopicsController#update (for 192.168.37.1 at 2009-06-13 17:58:00) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "topic"=>{"title"=>"", "description"=>""}, "id"=>"4"}
+  [4;35;1mTopic Load (0.7ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/edit
+Completed in 34ms (View: 9, DB: 1) | 200 OK [http://nbb.ilen.vm/topics/4]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.1ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (28.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (13.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (46.6ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (31.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (15.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.5ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (22.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (26.9ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mTopic Create (0.7ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "title", "updated_at", "description") VALUES('2009-06-13 22:13:22', 'Blah blah', '2009-06-13 22:13:22', 'more blah')[0m
+  [4;35;1mTopic Load (1.4ms)[0m   [0mSELECT * FROM "topics" [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTopics (20090613205354)
+Migrating to CreateVotes (20090613220915)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090613220915')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("topics")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("votes")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (45.5ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (38.6ms)[0m   [0;1mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (13.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (12.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613220915')[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (9.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613220915')[0m
+  [4;35;1mSQL (11.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (45.2ms)[0m   [0;1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (25.4ms)[0m   [0;1mCREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (14.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (11.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090613220915')[0m
+  [4;35;1mSQL (14.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090613205354')[0m
+
+
+Processing TopicsController#show (for 192.168.37.1 at 2009-06-13 18:18:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.4ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 25ms (View: 4, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/4]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 18:18:59) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 18:19:02) [GET]
+  [4;36;1mTopic Load (1.6ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 28ms (View: 13, DB: 2) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#destroy (for 192.168.37.1 at 2009-06-13 18:19:10) [DELETE]
+  Parameters: {"authenticity_token"=>"zwEhlQWwJ09pd6pYKffPAw+8ABMbWIAccNiURV3Q4CA=", "id"=>"4"}
+  [4;35;1mTopic Load (5.3ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+  [4;36;1mTopic Destroy (0.5ms)[0m   [0;1mDELETE FROM "topics" WHERE "id" = 4[0m
+Redirected to http://nbb.ilen.vm:3000/topics
+Completed in 30ms (DB: 6) | 302 Found [http://nbb.ilen.vm/topics/4]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 18:19:10) [GET]
+  [4;35;1mTopic Load (0.9ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#index (for 192.168.37.1 at 2009-06-13 18:19:17) [GET]
+  [4;36;1mTopic Load (0.9ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://nbb.ilen.vm/topics]
+
+
+Processing TopicsController#new (for 192.168.37.1 at 2009-06-13 18:20:35) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 20ms (View: 6, DB: 0) | 200 OK [http://nbb.ilen.vm/topics/new]
+
+
+Processing VotesController#index (for 192.168.37.1 at 2009-06-13 18:20:40) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

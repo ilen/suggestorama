@@ -3,13 +3,14 @@
 <table>
   <tr>
     <th>Topic Title</th>
-    <th>Topic Description</th>
+    <th colspan=5></th>
   </tr>
 
 <% @topics.each do |topic| %>
   <tr>
     <td><%=h topic.title %></td>
-    <td><%=h topic.description %></td>
+    <td><%=h pluralize(topic.votes.length, 'vote')%></td>
+    <td><%= button_to "+1", topic_votes_path(topic), :method => :post%></td>
     <td><%= link_to 'View', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
     <td><%= link_to 'Remove', topic, :confirm => 'Are you sure?', :method => :delete %></td>

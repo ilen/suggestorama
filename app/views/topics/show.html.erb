@@ -8,6 +8,14 @@
   <%=h @topic.description %>
 </p>
 
+<p>
+<b>Votes:</b>
+<%=h @topic.votes.length %>
+<%= button_to "+1", topic_votes_path(@topic), :method => :post %>
+</p>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
+
+
+
